@@ -156,9 +156,11 @@ img { display: block; width: 100%; }
 .hero-actions {
   display: flex;
   align-items: center;
-  gap: 1.75rem;
+  gap: 0.75rem;
   margin-top: 2.5rem;
 }
+
+.hero-actions .button { flex: 1; min-width: 0; gap: 0; padding-right: 0.9rem; padding-left: 0.9rem; }
 
 .button {
   display: inline-flex;
@@ -168,6 +170,7 @@ img { display: block; width: 100%; }
   min-width: 12rem;
   padding: 1rem 1.15rem;
   border: 1px solid transparent;
+  border-radius: 2px;
   font-size: 0.78rem;
   font-weight: 600;
   text-decoration: none;
@@ -176,6 +179,12 @@ img { display: block; width: 100%; }
 
 .button-primary { color: var(--ink); background: var(--white); }
 .button-primary:hover { color: var(--white); background: transparent; border-color: var(--white); }
+.button-outline-light { color: var(--white); background: transparent; border-color: rgba(255,255,255,0.82); }
+.button-outline-light:hover { color: var(--ink); background: var(--white); border-color: var(--white); }
+.button-dark { color: var(--white); background: var(--ink); border-color: var(--ink); }
+.button-dark:hover { color: var(--ink); background: transparent; }
+.button-outline-dark { color: var(--ink); background: transparent; border-color: var(--ink); }
+.button-outline-dark:hover { color: var(--white); background: var(--ink); }
 .button-light { color: var(--ink); background: var(--paper); }
 .button-light:hover { color: var(--paper); background: transparent; border-color: var(--paper); }
 
@@ -209,14 +218,11 @@ img { display: block; width: 100%; }
 }
 
 .reading-promo {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(11rem, auto);
-  gap: clamp(3rem, 8vw, 9rem);
-  align-items: start;
+  display: block;
 }
 
-.reading-ctas { display: flex; flex-direction: column; align-items: flex-start; gap: 1.25rem; padding-top: 0.4rem; }
-.reading-ctas a { font-size: 0.92rem; font-weight: 500; text-decoration-thickness: 1px; text-underline-offset: 0.3rem; }
+.reading-ctas { display: flex; align-items: stretch; gap: 1rem; margin-top: 2.5rem; }
+.reading-ctas .button { min-width: 12.5rem; }
 
 .section h2,
 .index-intro h1 {
@@ -360,14 +366,15 @@ img { display: block; width: 100%; }
   .hero-copy { min-height: 29rem; padding-top: 3rem; padding-bottom: 3rem; }
   .hero h1 { font-size: clamp(2.35rem, 12.5vw, 4rem); }
   .hero-actions { align-items: flex-start; flex-direction: column; gap: 1.25rem; }
+  .hero-actions .button { width: 100%; }
   .section { display: block; }
   .section-label { display: flex; gap: 1rem; align-items: baseline; padding: 2rem var(--page-pad) 0; border-right: 0; }
   .section-label p { margin: 0; }
   .section-body { padding-top: 2rem; }
   .section-heading-row { align-items: flex-start; flex-direction: column; }
-  .reading-promo { display: block; }
   .section .reading-promo h2 { max-width: 12ch; }
-  .reading-ctas { gap: 1rem; margin-top: 2.5rem; padding-top: 0; }
+  .reading-ctas { align-items: stretch; flex-direction: column; gap: 0.75rem; margin-top: 2.5rem; }
+  .reading-ctas .button { width: 100%; }
   .chapter-feature,
   .chapter-row { grid-template-columns: 3rem 1fr auto; min-height: 6rem; }
   .chapter-row-copy { padding: 1.5rem 0; }
