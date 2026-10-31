@@ -223,6 +223,8 @@ img { display: block; width: 100%; }
 
 .reading-ctas { display: flex; align-items: stretch; gap: 1rem; margin-top: 2.5rem; }
 .reading-ctas .button { min-width: 12.5rem; }
+.section-heading-stack .button,
+.subscribe-panel .button { width: fit-content; min-width: 12.5rem; margin-top: 2.5rem; }
 
 .section h2,
 .index-intro h1 {
@@ -264,11 +266,11 @@ img { display: block; width: 100%; }
 .about-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: clamp(3rem, 8vw, 9rem); }
 .about-copy { max-width: 33rem; font-family: var(--reading); font-size: clamp(1.05rem, 1.5vw, 1.25rem); line-height: 1.62; }
 .about-copy p:first-child { margin-top: 0; }
-.about-copy p:last-child { color: var(--muted); }
+.about-copy p:last-child { margin-bottom: 0; }
 
 .subscribe { color: var(--white); background: var(--ink); border-color: rgba(255,255,255,0.25); }
 .subscribe .section-label { border-color: rgba(255,255,255,0.25); }
-.subscribe-panel { display: flex; align-items: flex-end; justify-content: space-between; gap: 3rem; }
+.subscribe-panel { display: block; }
 .subscribe h2 { max-width: 16ch; }
 
 .site-footer {
@@ -375,6 +377,8 @@ img { display: block; width: 100%; }
   .section .reading-promo h2 { max-width: 12ch; }
   .reading-ctas { align-items: stretch; flex-direction: column; gap: 0.75rem; margin-top: 2.5rem; }
   .reading-ctas .button { width: 100%; }
+  .section-heading-stack .button,
+  .subscribe-panel .button { width: 100%; }
   .chapter-feature,
   .chapter-row { grid-template-columns: 3rem 1fr auto; min-height: 6rem; }
   .chapter-row-copy { padding: 1.5rem 0; }
