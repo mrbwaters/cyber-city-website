@@ -217,14 +217,15 @@ img { display: block; width: 100%; }
   margin-bottom: 3rem;
 }
 
-.reading-promo {
-  display: block;
+.section-action-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 15rem;
+  gap: clamp(3rem, 7vw, 8rem);
+  align-items: center;
 }
 
-.reading-ctas { display: flex; align-items: stretch; gap: 1rem; margin-top: 2.5rem; }
-.reading-ctas .button { min-width: 12.5rem; }
-.section-heading-stack .button,
-.subscribe-panel .button { width: fit-content; min-width: 12.5rem; margin-top: 2.5rem; }
+.section-actions { display: flex; flex-direction: column; gap: 0.75rem; align-items: stretch; }
+.section-actions .button { width: 100%; min-width: 0; }
 
 .section h2,
 .index-intro h1 {
@@ -237,7 +238,7 @@ img { display: block; width: 100%; }
   letter-spacing: -0.035em;
 }
 
-.section .reading-promo h2 { max-width: none; }
+.section .section-action-layout h2 { max-width: 18ch; }
 
 .chapter-feature,
 .chapter-row {
@@ -270,7 +271,6 @@ img { display: block; width: 100%; }
 
 .subscribe { color: var(--white); background: var(--ink); border-color: rgba(255,255,255,0.25); }
 .subscribe .section-label { border-color: rgba(255,255,255,0.25); }
-.subscribe-panel { display: block; }
 .subscribe h2 { max-width: 16ch; }
 
 .site-footer {
@@ -356,7 +356,6 @@ img { display: block; width: 100%; }
   .section-label,
   .section-body { padding-top: 3.5rem; padding-bottom: 3.5rem; }
   .about-grid { grid-template-columns: 1fr; gap: 3rem; }
-  .subscribe-panel { align-items: flex-start; flex-direction: column; }
 }
 
 @media (max-width: 620px) {
@@ -374,11 +373,9 @@ img { display: block; width: 100%; }
   .section-label p { margin: 0; }
   .section-body { padding-top: 2rem; }
   .section-heading-row { align-items: flex-start; flex-direction: column; }
-  .section .reading-promo h2 { max-width: 12ch; }
-  .reading-ctas { align-items: stretch; flex-direction: column; gap: 0.75rem; margin-top: 2.5rem; }
-  .reading-ctas .button { width: 100%; }
-  .section-heading-stack .button,
-  .subscribe-panel .button { width: 100%; }
+  .section-action-layout { display: block; }
+  .section .section-action-layout h2 { max-width: 12ch; }
+  .section-actions { margin-top: 2.5rem; }
   .chapter-feature,
   .chapter-row { grid-template-columns: 3rem 1fr auto; min-height: 6rem; }
   .chapter-row-copy { padding: 1.5rem 0; }
