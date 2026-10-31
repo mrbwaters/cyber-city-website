@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">Cyber City</title>
+  <rect width="512" height="512" rx="28" fill="#11110f"/>
+  <path fill="#f2efe8" d="M406 96H176c-64 0-104 40-104 104v112c0 64 40 104 104 104h230v-88H192c-22 0-32-10-32-32v-80c0-22 10-32 32-32h214V96Z"/>
+  <path fill="#11110f" d="M374 96h32v35l-22 22h-10V96Zm0 263h10l22 22v35h-32v-57Z"/>
+</svg>
